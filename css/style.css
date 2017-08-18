@@ -1,0 +1,323 @@
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome|typicons);
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%; /* largo barra de menu*/
+    height: 75px; /*anchura barra menu*/
+    background: #0C0CD2;/* barra menu*/
+    color: #fff;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+
+ header .contenedor img { /*imagen logo*/
+    width: 25%;
+    height: 25%;
+}
+
+h1 {
+    float: left;
+    margin-top: 5px;
+}
+
+div {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#bienvenidos {
+    text-align: center;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.sociales a {
+    color: #034f84;
+    text-decoration: none;
+}
+
+@media (min-width:768px) { 
+    .sociales {
+        width: auto;
+    }
+    
+    footer .contenedor {
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+}
+
+
+#informacion h2, h3,h4 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#informacion .contenedor{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#informacion .text1 {
+    font-size: 19px;
+    line-height: 19px;
+    text-align: center;
+    color: blue;
+}
+
+#paginaPortada {
+    margin-top: 40px; /*margen fondo portada*/
+    position: relative;
+}
+
+#paginaPortada img { /*imagen portada*/
+    width: 100%;
+    height: 100%;
+}
+
+#paginaPortada .contenedor { /*texto dentro de la imagen*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+}
+
+#paginaPortada h2 {
+    font-size: 28px;
+}
+
+#paginaPortada a {
+    display: block;
+    width: 100px;
+    color: #fff;
+    font-family: 5px solid;
+    text-decoration: none;
+    padding: 7px;
+    margin-top: 10px;
+    border: 3px solid #fff;
+}
+
+#paginaPortada a:hover {
+    background: #0C0CD2; /*efecto color "leer mas"*/
+}
+
+@media (min-width:480px) {
+    #paginaPortada h2 {
+        font-size: 40px;
+    }
+    
+    #paginaPortada a {
+        margin-top: 25px;
+    }
+}
+    
+    #paginaPortada img {
+        height: auto;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width:1024px) { 
+    #paginaPortada img {
+        margin-top: -200px;
+    }
+}
+
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+#menu-bar:checked ~ .menu {
+    transform: translateX(0%);
+}
+
+@media (min-width:1024px) { /*barra menu*/
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    
+    .menu a {
+        border: none;
+        margin-top: 10px;
+    }
+
+    header label { 
+        display: none;
+    }
+}
+
+/*Estilos de la galeria de imagenes*/
+#galeria {
+    /*background-color: #7f4c76;*/
+    text-align: center;
+    margin-top: 80px;
+
+}
+
+
+.galeria {
+    width: 100%;
+    margin:center;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+.galeria li {
+    margin: 10px;
+}
+
+.galeria img {
+    width: 150px;
+    height: 150px;
+}
+
+/*Estilos del modal*/
+
+.modal {
+    display: none;
+}
+
+.modal:target {
+    
+    display: block; /* visualizacion fotos*/
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal h3 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.imagen {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen a {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.imagen a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+}
+
+.imagen img {
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+}
+
+.cerrar {
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 15px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    padding:4px;
+    border-radius: 50%;
+    line-height: 20px;
+}
+/*---------- fin galeria ----------*/
